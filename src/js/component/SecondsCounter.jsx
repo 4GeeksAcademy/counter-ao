@@ -6,21 +6,21 @@ const SecondsCounter = ({ seconds }) => {
       <div className="row justify-content-center">
         <div className="col-12 col-md-8">
           <div className="counter-container">
-            <div className="counter-digit">
-              <spam className="icon">&#128338;</spam>
-              <div>
-                <div className="counter-digit">{Math.floor(seconds / 10000) %  10}</div>
-                <div className="counter-digit">{Math.floor(seconds / 1000) %  10}</div>
-                <div className="counter-digit">{Math.floor(seconds / 100) %  10}</div>
-                <div className="counter-digit">{Math.floor(seconds / 10) %  10}</div>
-                <div className="counter-digit">{Math.floor(seconds / 1) %  10}</div>
-                <div className="counter-digit">{seconds}</div>
-              </div>
-            </div>
+
+            <spam className="icon">&#128338;</spam>
+            <div className="counter-digit">{Math.floor(seconds / 100000) % 10}</div>  
+            <div className="counter-digit">{Math.floor(seconds / 10000) % 10}</div>
+            <div className="counter-digit">:</div>
+            <div className="counter-digit">{Math.floor(seconds / 1000) % 10}</div>
+            <div className="counter-digit">{Math.floor(seconds / 100) % 10}</div>
+            <div className="counter-digit">:</div>
+            <div className="counter-digit">{Math.floor(seconds / 10) % 10}</div>
+            <div className="counter-digit">{Math.floor(seconds / 1) % 10}</div>
+            {/* <div className="counter-digit">{seconds}</div> */}
+
           </div>
         </div>
       </div>
-
     </div>
   )
 }
